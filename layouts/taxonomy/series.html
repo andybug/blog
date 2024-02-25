@@ -1,0 +1,14 @@
+{{ define "main" }}
+  {{ $seriesKey := .Page.Data.Term }}
+  {{ $seriesData := index .Site.Data.series $seriesKey }}
+  <h1>{{ $seriesData.title }}</h1>
+  <p>{{ $seriesData.blurb }}</p>
+  <ol>
+    {{ range .Data.Pages.ByDate }}
+      <li>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <p>{{ .Summary }}</p>
+      </li>
+    {{ end }}
+  </ol>
+{{ end }}
