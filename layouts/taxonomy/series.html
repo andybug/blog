@@ -6,7 +6,8 @@
   <ol>
     {{ range .Data.Pages.ByDate }}
       <li>
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <h2 style="margin-bottom: 0;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <time>{{ .Date.Format "January 2, 2006" }}</time>
         <p>{{ .Summary }}</p>
       </li>
     {{ end }}

@@ -10,10 +10,10 @@ enableInlineShortcodes = true
 
 theme = 'paper'
 
-#[markup]
-#  [markup.goldmark]
-#    [markup.goldmark.renderer]
-#      unsafe = true
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [params]
 color = "linen"
