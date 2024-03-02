@@ -3,7 +3,7 @@
   <ul>
     {{ range $.Site.Taxonomies.series }}
       <li>
-        <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }} posts)
+        <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }} posts)
       </li>
     {{ end }}
   </ul>
