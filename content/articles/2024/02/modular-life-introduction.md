@@ -9,7 +9,7 @@ tags:
  - wasm
 summary: |
     Introduces WebAssembly outside of the browser and explains some of its
-    benefits as an embedded langauge.
+    benefits as an embedded language.
 ---
 
 _This article is part of the [Modular Life](/series/modular-life) series._
