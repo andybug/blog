@@ -18,6 +18,7 @@ theme = 'paper'
 [params]
 color = "linen"
 monoDarkIcon = true
+math = true
 rss = true
 github = 'andybug'
 
