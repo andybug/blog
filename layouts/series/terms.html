@@ -1,10 +1,10 @@
 {{ define "main" }}
-  <h1>Series</h1>
-  <ul>
-    {{ range $.Site.Taxonomies.series }}
-      <li>
-        <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a> ({{ .Count }} posts)
-      </li>
-    {{ end }}
-  </ul>
+<h1>Series</h1>
+{{ range $.Site.Data.series }}
+<section class="relative my-10">
+  <h2 class="!my-0 pb-1 font-bold !leading-none">{{ .title }}</h2>
+  <p>{{ .blurb }}</p>
+  <a class="absolute inset-0 text-[0]" href="{{ .slug }}"></a>
+</section>
+{{ end }}
 {{ end }}

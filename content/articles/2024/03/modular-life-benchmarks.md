@@ -3,6 +3,7 @@ title: 'Modular Life: Benchmarks'
 date: 2024-03-02
 params:
   author: Andrew Fields
+  shortTitle: Benchmarks
 series:
  - modular-life
 tags:

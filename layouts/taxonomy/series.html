@@ -1,15 +1,24 @@
 {{ define "main" }}
-  {{ $seriesKey := .Page.Data.Term }}
-  {{ $seriesData := index .Site.Data.series $seriesKey }}
-  <h1>{{ $seriesData.title }}</h1>
-  <p>{{ $seriesData.blurb }}</p>
-  <ol>
-    {{ range .Data.Pages.ByDate }}
-      <li>
-        <h2 style="margin-bottom: 0;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        <time>{{ .Date.Format "January 2, 2006" }}</time>
-        <p>{{ .Summary }}</p>
-      </li>
-    {{ end }}
-  </ol>
+{{ $seriesKey := .Page.Data.Term }}
+{{ $seriesData := index .Site.Data.series $seriesKey }}
+<h1>{{ $seriesData.title }}</h1>
+<p>{{ $seriesData.blurb }}</p>
+
+{{ range $i, $page := .Data.Pages.ByDate }}
+<section class="my-10 flex items-center relative" style="overflow: hidden">
+  <!-- Left side for the sequence number -->
+  <div class="w-16 text-center h-full shrink-0" style="float: left;">
+    <span class="text-2xl font-bold">{{ add $i 1 }}</span>
+  </div>
+
+  <!-- Right side for the content -->
+  <div class="mx-6 relative">
+    <h2 class="!my-0 pb-1 font-bold !leading-none">{{ .Params.shortTitle }}</h2>
+    <time class="text-sm opacity-60">{{ .Date.Format "January 2, 2006" }}</time>
+    <p class="my-0">{{ .Summary }}</p>
+  </div>
+
+  <a class="absolute inset-0 text-[0]" href="{{ .RelPermalink }}">{{ .Title }}</a>
+</section>
+{{ end }}
 {{ end }}

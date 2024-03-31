@@ -1,7 +1,7 @@
 modular-life:
   title: 'Modular Life: Learning Embedded WASM with Cellular Automaton'
+  slug: modular-life
   blurb: |
     This series explores the embedding of WebAssembly (WASM) into Rust projects
     outside of the browser, using a cellular automaton simulation as an
     example. Aimed at those familiar with Rust but new to WebAssembly.
-

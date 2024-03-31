@@ -2,7 +2,6 @@
 
 baseURL = 'https://andybug.com/'
 title = "andybug"
-author = "Andrew Fields"
 copyright = "Copyright © 2024, Andrew Fields."
 languageCode = "en-US"
 enableRobotsTXT = true

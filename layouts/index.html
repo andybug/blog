@@ -1,12 +1,11 @@
 {{ define "main" }}
-<div class="posts">
-    {{ range .Site.RegularPages.ByDate.Reverse }}
-    <div class="post">
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        <time>{{ .Date.Format "January 2, 2006" }}</time>
-        <p>{{ .Summary }}</p>
-    </div>
-    {{ end }}
-</div>
+{{ range .Site.RegularPages.ByDate.Reverse }}
+<section class="my-10 relative">
+  <h2 class="!my-0 pb-1 font-bold !leading-none">{{ .Title }}</h2>
+  <time class="text-sm opacity-60">{{ .Date.Format "January 2, 2006" }}</time>
+  <p class="my-0">{{ .Summary }}</p>
+  <a class="absolute inset-0 text-[0]" href="{{ .RelPermalink }}"></a>
+</section>
+{{ end }}
 {{ end }}
 

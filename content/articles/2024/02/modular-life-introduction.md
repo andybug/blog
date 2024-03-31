@@ -3,6 +3,7 @@ title: 'Modular Life: Introduction'
 date: 2024-02-24
 params:
   author: Andrew Fields
+  shortTitle: Introduction
 series:
  - modular-life
 tags:
